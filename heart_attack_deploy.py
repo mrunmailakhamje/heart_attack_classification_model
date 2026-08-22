@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = "rf_model_heat_attack.pkl"
+model = joblib.load("rf_model_heat_attack.pkl")
 encoder = ""
 st.title("heart_attack_result_prediction  !")
 
