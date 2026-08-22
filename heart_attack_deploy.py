@@ -16,7 +16,7 @@ encoder = ""
 st.title("heart_attack_result_prediction  !")
 
 age = st.number_input("Age", min_value=0.0)
-gender = st.selectbox("Gender",encoder["Gender"].classes_)
+gender = st.selectbox("Gender",[0,1])
 heart_rate = st.number_input("Heart rate", min_value=0.0)
 systolic_blood_pressure = st.number_input("Systolic Blood Pressure",min_value=0.0)
 diastolic_blood_pressure = st.number_input("Diastolic Blood Pressure",min_value=0.0)
