@@ -18,29 +18,27 @@ st.title("heart_attack_result_prediction  !")
 age = st.number_input("Age", min_value=0.0)
 gender = st.selectbox("Gender",encoder["Gender"].classes_)
 heart_rate = st.number_input("Heart rate", min_value=0.0)
-systolic_blood_pressure = st.number_input("Systolic Blood Pressure", min_value=0.0)
-diastolic_blood_pressure = st.number_input("Diastolic Blood Pressure", min_value=0.0)
+systolic_blood_pressure = st.number_input("Systolic Blood Pressure",min_value=0.0)
+diastolic_blood_pressure = st.number_input("Diastolic Blood Pressure",min_value=0.0)
 blood_sugar = st.number_input("Blood sugar", min_value=0.0)
 CK_MB = st.number_input("CK-MB", min_value=0.0)
 troponin = st.number_input("Troponin", min_value=0.0)
 
-
-df=pd.DataFrame({
-    "Age":[Age],
-    "Gender":[Gender],
-    "Heart rate":[Heart_rate],
-    "Systolic blood pressure":[Systolic_blood_pressure],
-    "Diastolic blood pressure":[Diastolic_blood_pressure],
-    "Blood sugar":[Blood_sugar],
-    "CK-MB":[CK_MB],
-    "Troponin":[Troponin],
-
+df = pd.DataFrame({
+    "Age": [age],
+    "Gender": [gender],
+    "Heart rate": [heart_rate],
+    "Systolic blood pressure": [systolic_blood_pressure],
+    "Diastolic blood pressure": [diastolic_blood_pressure],
+    "Blood sugar": [blood_sugar],
+    "CK-MB": [CK_MB],
+    "Troponin": [troponin]
 })
 
-if st.button("Predict occurance of heart attack"):
+if st.button("Predict occurrence of heart attack"):
     prediction = model.predict(df)[0]
 
     if prediction == 1:
-        st.write("Prediction: Chances of occuring heart attack")
+        st.write("Prediction: Chances of occurring heart attack")
     else:
         st.write("Prediction: Heart attack will not occur")
