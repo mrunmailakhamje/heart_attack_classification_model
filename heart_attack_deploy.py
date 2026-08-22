@@ -28,11 +28,11 @@ troponin = st.number_input("Troponin", min_value=0.0)
 df=pd.DataFrame({
     "Age":[Age],
     "Gender":[Gender],
-    "Heart rate":[Heart rate],
-    "Systolic blood pressure":[Systolic blood pressure],
-    "Diastolic blood pressure":[Diastolic blood pressure],
-    "Blood sugar":[Blood sugar],
-    "CK-MB":[CK-MB],
+    "Heart rate":[Heart_rate],
+    "Systolic blood pressure":[Systolic_blood_pressure],
+    "Diastolic blood pressure":[Diastolic_blood_pressure],
+    "Blood sugar":[Blood_sugar],
+    "CK-MB":[CK_MB],
     "Troponin":[Troponin],
 
 })
